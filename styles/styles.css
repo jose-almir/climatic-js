@@ -1,0 +1,56 @@
+:root {
+    --color-50: #e0f4ff;
+    --color-100: #b8dcfa;
+    --color-200: #8ec4f1;
+    --color-300: #63ace8;
+    --color-400: #3994e0;
+    --color-500: #1f7bc6;
+    --color-600: #135f9b;
+    --color-700: #084470;
+    --color-800: #002946;
+    --color-900: #000f1d;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-800);
+}
+
+.card {
+    height: 85vh;
+    width: 90%;
+    border: 0.5px solid rgba(0, 0, 0, .3);
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+}
+
+.with-loader {
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border: 7px solid rgba(0, 0, 0, .3);
+    border-top: 7px solid var(--color-500);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin: 16px;
+    animation: loader-animation 1.5s infinite;
+    display: flex;
+    align-self: center;
+}
+
+@keyframes loader-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
