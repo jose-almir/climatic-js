@@ -81,7 +81,7 @@ function startLoader() {
 function createWeatherIcon(code) {
   const icon = document.createElement("img");
   icon.classList.add("weather-icon");
-  icon.src = `../assets/icons/${code}.png`;
+  icon.src = `/assets/icons/${code}.png`;
   icon.style.height = "96px";
 
   return icon;
