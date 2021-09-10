@@ -1,5 +1,5 @@
 const baseUrl =
-  "http://api.openweathermap.org/data/2.5/weather?units=metric&lang=pt_br";
+  "https://api.openweathermap.org/data/2.5/weather?units=metric&lang=pt_br";
 const apiKey = "d9701d19179eca8fe88710b3f779d3f5";
 
 const card = document.getElementById("weather-card");
