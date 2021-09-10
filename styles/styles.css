@@ -1,56 +1,154 @@
 :root {
-    --color-50: #e0f4ff;
-    --color-100: #b8dcfa;
-    --color-200: #8ec4f1;
-    --color-300: #63ace8;
-    --color-400: #3994e0;
-    --color-500: #1f7bc6;
-    --color-600: #135f9b;
-    --color-700: #084470;
-    --color-800: #002946;
-    --color-900: #000f1d;
+  --color-50: #e0f4ff;
+  --color-100: #b8dcfa;
+  --color-200: #8ec4f1;
+  --color-300: #63ace8;
+  --color-400: #3994e0;
+  --color-500: #1f7bc6;
+  --color-600: #135f9b;
+  --color-700: #084470;
+  --color-800: #002946;
+  --color-900: #000f1d;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--color-800);
+  font-family: "IBM Plex Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-800);
 }
 
 .card {
-    height: 85vh;
-    width: 90%;
-    border: 0.5px solid rgba(0, 0, 0, .3);
-    border-radius: 8px;
-    background-color: white;
-    display: flex;
+  height: 65vh;
+  width: 90%;
+  /* border: 5px solid white; */
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
 }
 
 .with-loader {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.coords {
+  float: right;
+  font-weight: 300;
 }
 
 .loader {
-    border: 7px solid rgba(0, 0, 0, .3);
-    border-top: 7px solid var(--color-500);
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    margin: 16px;
-    animation: loader-animation 1.5s infinite;
-    display: flex;
-    align-self: center;
+  border: 7px solid rgba(0, 0, 0, 0.3);
+  border-top: 7px solid var(--color-500);
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin: 16px;
+  animation: loader-animation 1.5s infinite;
+  display: flex;
+  align-self: center;
+}
+
+.content,
+.error {
+  display: none;
+}
+
+.content {
+  flex-direction: column;
+  flex: 1;
+}
+
+.figure {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .backdrop {
+  filter: brightness(50%);
+  background-image: url("../assets/img/sunny.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  filter: blur(0.7px) brightness(50%);
+} */
+
+.weather-icon {
+  margin-right: 8px;
+}
+
+.info {
+  position: relative;
+  padding: 16px;
+  color: var(--color-800);
+}
+
+.data {
+  flex: 1;
+}
+
+.title,
+.max-min-temp,
+.feels-like {
+  text-align: center;
+}
+
+.max-min-temp,
+.feels-like {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
 }
 
 @keyframes loader-animation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .max-min-temp {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .card {
+    width: 40%;
+  }
 }
