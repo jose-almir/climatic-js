@@ -23,7 +23,6 @@ body {
 .card {
   height: 65vh;
   width: 90%;
-  /* border: 5px solid white; */
   border-radius: 8px;
   background-color: white;
   display: flex;
@@ -35,7 +34,6 @@ body {
 }
 
 .coords {
-  float: right;
   font-weight: 300;
 }
 
@@ -56,8 +54,18 @@ body {
   display: none;
 }
 
+.error {
+  flex: 1;
+  color: red;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .content {
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
 
@@ -67,22 +75,6 @@ body {
   overflow: hidden;
 }
 
-/* .backdrop {
-  filter: brightness(50%);
-  background-image: url("../assets/img/sunny.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  position: absolute;
-  object-fit: cover;
-  object-position: center center;
-  width: 100%;
-  height: 100%;
-  filter: blur(0.7px) brightness(50%);
-} */
-
 .weather-icon {
   margin-right: 8px;
 }
@@ -91,6 +83,7 @@ body {
   position: relative;
   padding: 16px;
   color: var(--color-800);
+  
 }
 
 .data {
@@ -99,8 +92,14 @@ body {
 
 .title,
 .max-min-temp,
-.feels-like {
+.feels-like,
+#temp-desc,
+#wind-desc {
   text-align: center;
+}
+
+p svg {
+  margin: 0px 5px;
 }
 
 .max-min-temp,

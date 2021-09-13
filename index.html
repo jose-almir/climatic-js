@@ -21,20 +21,26 @@
     <div id="weather-card" class="card with-loader">
       <div id="weather-loader" class="loader"></div>
       <div id="weather-content" class="content">
+        <span id="coords" class="coords">
+          <i class="fas fa-map-marker-alt"></i>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
         <div id="weather-info" class="info">
-          <span id="coords" class="coords">
-            <i class="fas fa-map-marker-alt"></i>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
           <h2 id="temp" class="title"></h2>
           <p id="max-min-temp" class="max-min-temp"></p>
           <p id="feels-like" class="feels-like"></p>
           <p id="temp-desc"></p>
+          <p id="wind-desc"></p>
         </div>
       </div>
-      <div id="weather-error" class="error">Erro</div>
+      <div id="weather-error" class="error">
+        <p>
+          <span> <i class="fas fa-exclamation-triangle"></i></span>
+          Um erro ocorreu tente novamente.
+        </p>
+      </div>
     </div>
     <script src="./scripts/main.js"></script>
     <script
